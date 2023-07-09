@@ -5,7 +5,6 @@
         // Task 1
         int num = 1;
         int sum = 0;
-        // >0, %2=1, <50
         while (num > 0 && num < 50) // 0 < num < 50
         {
             if (num % 2 == 1)
@@ -14,7 +13,7 @@
             }
             num++;
         }
-        Console.WriteLine($"{sum}\n");
+        Console.WriteLine($"Task 1: {sum}\n");
 
 
         // Task 2
@@ -28,12 +27,13 @@
                 sum += i;
             }
         }
-        Console.WriteLine($"{sum}\n");
+        Console.WriteLine($"Task 2: {sum}\n");
 
 
         // Task 3
         int num1 = 10;
         int num2 = 99;
+
         List<int> numbers = new List<int>();
         for (int i = num1; i<=num2; i++) // a)
         {
@@ -43,6 +43,7 @@
                 numbers.Add(i);
             }
         }
+
         List<int> numbers2 = new List<int>();
         for (int i = num1; i<=num2; i++) // б)
         {
@@ -53,11 +54,16 @@
             }
             
         }
+
+        Console.WriteLine("Task 3 (a)");
         foreach (int i in numbers)
         {
             Console.WriteLine($"{i} ");
         }
+
         Console.WriteLine();
+
+        Console.WriteLine("Task 3 (b)");
         foreach (int i in numbers2)
         {
             Console.WriteLine($"{i} ");
@@ -73,16 +79,62 @@
             a = new Random().Next(-10, 10);
             b = new Random().Next(-10, 10);
         } while (a >= b);
-            Console.WriteLine($"a = {a}, b = {b}");
+        Console.WriteLine($"Task 4\na = {a}, b = {b}");
+
         for (int i = a; i <= b; i++)
         {
             sum += i;
             mult *= i;
         }
         Console.WriteLine($"Sum = {sum}. Multiplication = {mult}");
+        Console.WriteLine();
 
 
         // Task 5
+        do
+        {
+            a = new Random().Next(-10, 10);
+            b = new Random().Next(-10, 10);
+        } while (a >= b);
+        Console.WriteLine($"Task 5\na = {a}, b = {b}");
+
+        int N = 0;
+        for (int i = a; i <= b; i++)
+        {
+            Console.WriteLine(i);
+            N++;
+        }
+        Console.WriteLine($"N = {N}\n");
+
+
+        // Task 6
+        double price = 85.34;
+        double kg = 1;
+
+        Console.WriteLine("Task 6");
+        while (kg < 2)
+        {
+            Console.WriteLine($"{kg:F1} kg of candies cost {kg*price:F2} (UAH?)");
+            kg += 0.2;
+        }
+        Console.WriteLine();
+
+
+        // Task 7
+        do
+        {
+            a = new Random().Next(1, 5);
+            b = new Random().Next(1, 5);
+        } while (a >= b);
+        Console.WriteLine($"Task 7\na = {a}, b = {b}");
+        for (int i = a; i <= b; i++)
+        {
+            for (int j = 0; j < i; j++)
+            {
+                Console.WriteLine(i);
+            }
+        }
+
 
     }
 }
